@@ -1,8 +1,10 @@
-const productos = [
-    {id: 1, title: 'Escuadra', price: 232, thumbnail: 'img'},
-    {id: 2, title: 'Calculadora', price: 232, thumbnail: 'img'},
-    {id: 3, title: 'Globo Terraqueo', price: 232, thumbnail: 'img'}
-]
+const Contenedor = require('./contenedor')
+
+const contenedor = new Contenedor('./productos.txt')
+const productos = contenedor.getAll()
+//contenedor.save({title: 'producto agregado 1', price: 350, thumbnail: 'img'})
+
+console.log('productos:', productos)
 
 const express = require('express')
 const app = express()
@@ -12,10 +14,10 @@ app.listen(8080)
 
 console.log(`Servidor http escuchando en el puerto ${PORT}`)
 
-app.get('/productos', (req,res) =>{
+app.get('/productos', (req, res) =>{
     res.send(productos)
-    
 })
+
 
 let rand = Math.floor(Math.random()*productos.length)
 let productoRandom = productos[rand]
@@ -23,3 +25,6 @@ let productoRandom = productos[rand]
 app.get('/productosRandom', (req,res) =>{
     res.send(productoRandom)
 })
+
+
+

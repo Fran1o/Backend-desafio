@@ -1,9 +1,9 @@
 const Contenedor = require('./contenedor')
 
 const contenedor = new Contenedor('./productos.txt')
-const productos = contenedor.getAll()
-//contenedor.save({title: 'producto agregado 1', price: 350, thumbnail: 'img'})
+contenedor.save({title: 'producto agregado', price: 350, thumbnail: 'img'})
 
+const productos = contenedor.getAll2()
 console.log('productos:', productos)
 
 const express = require('express')

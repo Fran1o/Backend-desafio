@@ -1,1 +1,1 @@
-[{"id":1,"title":"Escuadra","price":232,"thumbnail":"img"},{"id":2,"title":"Calculadora","price":400,"thumbnail":"img"},{"id":3,"title":"Globo Terraqueo","price":500,"thumbnail":"img"},{"title":"producto agregado","price":350,"thumbnail":"img","id":4}]
+[{"id":1,"title":"Escuadra","price":232,"thumbnail":"img"},{"id":2,"title":"Calculadora","price":400,"thumbnail":"img"},{"id":3,"title":"Globo Terraqueo","price":500,"thumbnail":"img"}]

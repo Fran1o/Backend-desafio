@@ -17,8 +17,8 @@ class Contenedor{
         return dataJSON
     }
 
-    async save(objeto){
-        const dataJSON = await this.getAll()
+    save(objeto){
+        const dataJSON = this.getAll()
 
         const latestElement = dataJSON[dataJSON.length -1]
         const idLatestElement = latestElement.id
@@ -28,16 +28,16 @@ class Contenedor{
 
         const newArray = dataJSON.push(objeto)
 
-        await fs.promises.writeFile(this.file, `${JSON.stringify(dataJSON)}`)
+        fs.writeFileSync(this.file, `${JSON.stringify(dataJSON)}`)
 
 
         return dataJSON
         
     }
 
-    async getAll2(){
+    getAll2(){
 
-        const dataString = await fs.promises.readFile(this.file, "utf-8")
+        const dataString = fs.readFileSync(this.file, "utf-8")
         
         const dataJSON = JSON.parse(dataString)
 
